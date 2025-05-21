@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jenkins with SCM</title>
+</head>
+<body>
+  <h1>Jenkins + SCM Integration</h1>
+  
+  <h2>Step-by-Step Setup</h2>
+  <ol>
+    <li>Open Jenkins Dashboard</li>
+    <li>Create New Item → Enter name → Select "Freestyle project"</li>
+    <li>Go to <b>Source Code Management</b> section</li>
+    <li>Select <b>Git</b></li>
+    <li>Enter Repository URL (e.g., https://github.com/username/repo.git)</li>
+    <li>Optional: Add credentials if it's private</li>
+    <li>Set Branch (e.g., <code>main</code> or <code>master</code>)</li>
+    <li>Save the project</li>
+  </ol>
+
+  <h2>Trigger Build Automatically</h2>
+  <p>Go to <b>Build Triggers</b> and check <b>Poll SCM</b></p>
+  <p>Enter schedule: <code>H/5 * * * *</code> (every 5 mins)</p>
+
+  <h2>Build Output</h2>
+  <p>Jenkins will pull code from Git and run the build steps you define.</p>
+</body>
+</html>
